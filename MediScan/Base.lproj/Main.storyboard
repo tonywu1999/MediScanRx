@@ -32,14 +32,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.33721925145695464" blue="0.36766391500028939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Side Effects"/>
+                                <connections>
+                                    <action selector="side_effects:" destination="RxJ-cz-c4I" eventType="touchUpInside" id="pTR-ua-rlp"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFd-oJ-Azi">
-                                <rect key="frame" x="166" y="210" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Drug Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mqs-T8-YTG">
                                 <rect key="frame" x="139" y="291" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,16 +46,27 @@
                                     <action selector="drug_name:" destination="oAJ-5k-I5R" eventType="editingDidEnd" id="jnp-gR-dEI"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFd-oJ-Azi">
+                                <rect key="frame" x="36" y="211" width="275" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.30619217199999998" green="0.96759808380000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="afs-Xw-igm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="search" id="3AS-ug-bI6"/>
+                    <connections>
+                        <outlet property="drug_name" destination="Mqs-T8-YTG" id="7kR-DN-SpR"/>
+                        <outlet property="result" destination="bFd-oJ-Azi" id="H19-z6-z0d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gq2-R7-prY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="oAJ-5k-I5R" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1290" y="828"/>
+            <point key="canvasLocation" x="1288.8" y="827.13643178410803"/>
         </scene>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
@@ -141,6 +148,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Vkb-ch-KOE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fWM-Qe-3BH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

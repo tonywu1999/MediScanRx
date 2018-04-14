@@ -10,6 +10,9 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var drug_name: UITextField!
+    @IBOutlet weak var result: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +24,14 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func side_effects(_ sender: UIButton) {
+        let title = sender.title(for: .normal)!
+        result.text = "Wow " + (title)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     /*
     // MARK: - Navigation
 
