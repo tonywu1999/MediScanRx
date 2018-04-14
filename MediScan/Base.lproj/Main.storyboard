@@ -15,7 +15,7 @@
         <!--Search-->
         <scene sceneID="Jh5-bu-5rk">
             <objects>
-                <viewController id="RxJ-cz-c4I" sceneMemberID="viewController">
+                <viewController id="RxJ-cz-c4I" customClass="SearchViewController" customModule="MediScan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SFX-FO-gdm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,12 +78,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="LaunchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="0FK-8M-fgo">
+                                        <rect key="frame" x="51" y="202.5" width="241" height="248"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32407369140371733" green="1" blue="0.34098488398978688" alpha="0.56593860035211263" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0FK-8M-fgo" secondAttribute="bottom" constant="150" id="1d1-ZP-6sq"/>
                                     <constraint firstItem="Df6-3s-jGd" firstAttribute="leading" secondItem="eLK-C8-drT" secondAttribute="leading" constant="20" id="4mE-Ex-nSX"/>
+                                    <constraint firstItem="0FK-8M-fgo" firstAttribute="leading" secondItem="eLK-C8-drT" secondAttribute="leading" constant="51" id="A06-Un-qGL"/>
                                     <constraint firstAttribute="trailing" secondItem="Df6-3s-jGd" secondAttribute="trailing" constant="20" id="NAM-bv-gcl"/>
+                                    <constraint firstItem="0FK-8M-fgo" firstAttribute="top" secondItem="Df6-3s-jGd" secondAttribute="bottom" constant="150" id="OmP-hO-O7t"/>
                                     <constraint firstItem="Df6-3s-jGd" firstAttribute="top" secondItem="eLK-C8-drT" secondAttribute="top" constant="20" id="daK-cB-Xc5"/>
+                                    <constraint firstAttribute="trailing" secondItem="0FK-8M-fgo" secondAttribute="trailing" constant="51" id="hO2-gt-aU4"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -106,7 +113,7 @@
         <!--Scanner-->
         <scene sceneID="ido-0m-tD2">
             <objects>
-                <viewController id="fWN-qC-K93" sceneMemberID="viewController">
+                <viewController id="fWN-qC-K93" customClass="ScannerViewController" customModule="MediScan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rIK-IJ-fTr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,6 +156,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LaunchLogo" width="1200" height="1223"/>
         <image name="eye-solid" width="25" height="25"/>
         <image name="house_black_silhouette" width="25" height="25"/>
         <image name="search" width="25" height="25"/>
