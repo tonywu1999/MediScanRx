@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func side_effect(_ sender: UIButton) {
+    
+    }
+    @IBAction func drug_name(_ sender: UITextField) {
+        
+    }
+    
 }
 
