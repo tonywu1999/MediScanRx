@@ -8,14 +8,14 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var drug_name: UITextField!
     @IBOutlet weak var result: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.drug_name.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -30,6 +30,10 @@ class SearchViewController: UIViewController {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return (true)
     }
     
     /*
