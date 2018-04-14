@@ -12,10 +12,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var drug_name: UITextField!
     @IBOutlet weak var result: UILabel!
+    var drug_list = Drugs()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.drug_name.delegate = self
+        drug_list.set_up_dictionary()
         // Do any additional setup after loading the view.
     }
 
@@ -25,8 +27,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func side_effects(_ sender: UIButton) {
-        let title = sender.title(for: .normal)!
-        result.text = "Wow " + (title)
+        let user_input: String = drug_name.text!
+        if(drug_list.drug_in_database(name: user_input.uppercased())) {
+            let title2 = drug_list.get_side_effects(name: user_input.uppercased())
+            result.text = title2
+        }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

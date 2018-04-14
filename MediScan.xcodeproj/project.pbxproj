@@ -11,6 +11,7 @@
 		A36C2FF32081B49E00B64C7E /* drugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C2FF22081B49E00B64C7E /* drugs.swift */; };
 		A36C2FF52082683400B64C7E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C2FF42082683400B64C7E /* SearchViewController.swift */; };
 		A36C2FF7208268F700B64C7E /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C2FF6208268F700B64C7E /* ScannerViewController.swift */; };
+		A36C2FFB208287DB00B64C7E /* database.txt in Resources */ = {isa = PBXBuildFile; fileRef = A36C2FFA208287DB00B64C7E /* database.txt */; };
 		D091884720817A2B0025C8DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091884620817A2B0025C8DC /* AppDelegate.swift */; };
 		D091884920817A2B0025C8DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091884820817A2B0025C8DC /* ViewController.swift */; };
 		D091884C20817A2B0025C8DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D091884A20817A2B0025C8DC /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		A36C2FF22081B49E00B64C7E /* drugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drugs.swift; sourceTree = "<group>"; };
 		A36C2FF42082683400B64C7E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A36C2FF6208268F700B64C7E /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		A36C2FFA208287DB00B64C7E /* database.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.txt; sourceTree = "<group>"; };
 		D091884320817A2B0025C8DC /* MediScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D091884620817A2B0025C8DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D091884820817A2B0025C8DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				D091884620817A2B0025C8DC /* AppDelegate.swift */,
 				D091884820817A2B0025C8DC /* ViewController.swift */,
 				A36C2FF42082683400B64C7E /* SearchViewController.swift */,
+				A36C2FFA208287DB00B64C7E /* database.txt */,
 				A36C2FF6208268F700B64C7E /* ScannerViewController.swift */,
 				A36C2FF22081B49E00B64C7E /* drugs.swift */,
 				D091884A20817A2B0025C8DC /* Main.storyboard */,
@@ -241,6 +244,7 @@
 				D091885120817A2C0025C8DC /* LaunchScreen.storyboard in Resources */,
 				A36C2FEF20818DA600B64C7E /* Assets.xcassets in Resources */,
 				D091884C20817A2B0025C8DC /* Main.storyboard in Resources */,
+				A36C2FFB208287DB00B64C7E /* database.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
