@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MediScan
 //
-//  Created by Erlun Lian on 4/13/18.
+//  Created by Erlun Wu on 4/13/18.
 //  Copyright © 2018 Erlun Lian. All rights reserved.
 //
 
