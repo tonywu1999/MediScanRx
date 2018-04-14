@@ -27,10 +27,20 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func side_effects(_ sender: UIButton) {
+        let title = sender.title(for: .normal)!
         let user_input: String = drug_name.text!
+        let title2: String
         if(drug_list.drug_in_database(name: user_input.uppercased())) {
-            let title2 = drug_list.get_side_effects(name: user_input.uppercased())
+            if(title == "Side Effects") {
+                title2=drug_list.get_side_effects(name: user_input.uppercased())
+            }
+            else {
+                title2 = drug_list.get_main_usages(name: user_input.uppercased())
+            }
             result.text = title2
+        }
+        else {
+            result.text = "Drug not found in database"
         }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
