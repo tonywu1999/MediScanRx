@@ -140,17 +140,27 @@
                                     <action selector="capture_image:" destination="fWN-qC-K93" eventType="touchUpInside" id="hQH-xU-aUY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyw-SO-yV9">
+                                <rect key="frame" x="50" y="582" width="275" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.30619217199999998" green="0.96759808380000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="Iyw-SO-yV9" secondAttribute="bottom" constant="15" id="6zL-Lb-HEn"/>
                             <constraint firstItem="Yrw-Te-7Vg" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" constant="50" id="IVt-Zq-gpW"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="0Fj-Oq-H7H" secondAttribute="trailing" id="KIZ-SW-fi0"/>
                             <constraint firstItem="0Fj-Oq-H7H" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" id="NST-Xo-bqA"/>
                             <constraint firstItem="Yrw-Te-7Vg" firstAttribute="top" secondItem="0Fj-Oq-H7H" secondAttribute="bottom" constant="26" id="SjU-rN-mi4"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="AfY-Ld-rJl" secondAttribute="trailing" constant="20" id="VPj-oA-Pl7"/>
+                            <constraint firstItem="Iyw-SO-yV9" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" constant="50" id="VtT-Da-Kin"/>
+                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="Iyw-SO-yV9" secondAttribute="trailing" constant="50" id="Wky-Ar-cxf"/>
                             <constraint firstItem="AfY-Ld-rJl" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" constant="20" id="bcS-nG-eIp"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="0Fj-Oq-H7H" secondAttribute="bottom" constant="100" id="gWi-Ya-9sF"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="AfY-Ld-rJl" secondAttribute="bottom" constant="100" id="hy3-Ob-uRz"/>
+                            <constraint firstItem="Iyw-SO-yV9" firstAttribute="top" secondItem="Yrw-Te-7Vg" secondAttribute="bottom" constant="8" id="jPu-Er-UAP"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="Yrw-Te-7Vg" secondAttribute="trailing" constant="50" id="mjf-a2-fIr"/>
                             <constraint firstItem="0Fj-Oq-H7H" firstAttribute="top" secondItem="hiJ-vz-p9A" secondAttribute="top" constant="20" id="qdk-pU-950"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="Yrw-Te-7Vg" secondAttribute="bottom" constant="44" id="udf-Zy-lsV"/>
@@ -159,6 +169,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Live Camera" image="eye-solid" id="GA5-Ta-Z6Q"/>
                     <connections>
+                        <outlet property="drug" destination="Iyw-SO-yV9" id="C8c-5t-bJr"/>
                         <outlet property="imageView" destination="0Fj-Oq-H7H" id="84x-ib-e0M"/>
                     </connections>
                 </viewController>

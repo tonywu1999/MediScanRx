@@ -12,7 +12,6 @@ import Foundation
 
 class SearchViewController: UIViewController {
 
-    @IBOutlet weak var drug_name: UITextField!
     @IBOutlet weak var result: UILabel!
     var drug_list = Drugs()
     @IBOutlet weak var inputt: UITextView!

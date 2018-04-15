@@ -10,10 +10,12 @@ import UIKit
 import AVFoundation
 import Vision
 import Photos
+import TesseractOCR
 
 class ScanViewController: UIViewController {
 
     
+    @IBOutlet weak var drug: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     var session = AVCaptureSession()
     var requests = [VNRequest]()
@@ -142,6 +144,24 @@ class ScanViewController: UIViewController {
         imageView.layer.addSublayer(outline)
     }
     
+    func performImageRecognition(_ image: UIImage) {
+        // 1
+        if let tesseract = G8Tesseract(language: "eng") {
+            // 2
+            tesseract.engineMode = .tesseractCubeCombined
+            // 3
+            tesseract.pageSegmentationMode = .auto
+            // 4
+            tesseract.image = image.g8_blackAndWhite()
+            // 5
+            tesseract.recognize()
+            // 6
+            let acquired_text: String = tesseract.recognizedText
+            drug.text = acquired_text.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+        // 7
+    }
+    
     @IBAction func pressScan(_ sender: UIButton) {
         true_false = false
         startTextDetection()
@@ -167,6 +187,8 @@ class ScanViewController: UIViewController {
                 print(error ?? "Image capture error")
                 return
             }
+            let scaledImage = image.scaleImage(640)
+            self.performImageRecognition(scaledImage!)
             
             try? PHPhotoLibrary.shared().performChangesAndWait {
                 PHAssetChangeRequest.creationRequestForAsset(from: image)
