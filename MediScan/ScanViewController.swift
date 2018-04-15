@@ -12,11 +12,13 @@ import Vision
 
 class ScanViewController: UIViewController {
 
+    
     @IBOutlet weak var imageView: UIImageView!
     var session = AVCaptureSession()
     var requests = [VNRequest]()
     var count = 0
     
+    // Setting up Camera
     func startLiveVideo() {
         if(count == 0) {
             //1
@@ -50,6 +52,8 @@ class ScanViewController: UIViewController {
         imageView.layer.sublayers?[0].frame = imageView.bounds
     }
     
+    // Vision Stuff
+    
     func startTextDetection() {
         let textRequest = VNDetectTextRectanglesRequest(completionHandler: self.detectTextHandler)
         textRequest.reportCharacterBoxes = true
@@ -73,11 +77,13 @@ class ScanViewController: UIViewController {
                 
                 self.highlightWord(box: rg)
                 
+                /*
                 if let boxes = region?.characterBoxes {
                     for characterBox in boxes {
                         self.highlightLetters(box: characterBox)
                     }
                 }
+                */
             }
         }
     }
@@ -120,6 +126,7 @@ class ScanViewController: UIViewController {
         imageView.layer.addSublayer(outline)
     }
     
+    /*
     func highlightLetters(box: VNRectangleObservation) {
         let xCord = box.topLeft.x * imageView.frame.size.width
         let yCord = (1 - box.topLeft.y) * imageView.frame.size.height
@@ -133,6 +140,7 @@ class ScanViewController: UIViewController {
         
         imageView.layer.addSublayer(outline)
     }
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
