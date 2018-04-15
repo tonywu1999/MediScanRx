@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import Vision
+import Photos
 
 class ScanViewController: UIViewController {
 
@@ -18,6 +19,18 @@ class ScanViewController: UIViewController {
     var requests = [VNRequest]()
     var count = 0
     var true_false = true
+    var photoOutput: AVCapturePhotoOutput?
+    var photoCaptureCompletionBlock: ((UIImage?, Error?) -> Void)?
+    
+    enum CameraControllerError: Swift.Error {
+        case captureSessionAlreadyRunning
+        case captureSessionIsMissing
+        case inputsAreInvalid
+        case invalidOperation
+        case noCamerasAvailable
+        case unknown
+    }
+    
     
     // Setting up Camera
     func startLiveVideo() {
@@ -29,10 +42,12 @@ class ScanViewController: UIViewController {
             //2
             let deviceInput = try! AVCaptureDeviceInput(device: captureDevice!)
             let deviceOutput = AVCaptureVideoDataOutput()
+            self.photoOutput = AVCapturePhotoOutput()
             deviceOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA)]
             deviceOutput.setSampleBufferDelegate(self, queue: DispatchQueue.global(qos: DispatchQoS.QoSClass.default))
             session.addInput(deviceInput)
             session.addOutput(deviceOutput)
+            session.addOutput(photoOutput!)
             
             //3
             let imageLayer = AVCaptureVideoPreviewLayer(session: session)
@@ -135,6 +150,30 @@ class ScanViewController: UIViewController {
         true_false = true
         startTextDetection()
     }
+    
+    @IBAction func capture_image(_ sender: UIButton) {
+        func captureImage(completion: @escaping (UIImage?, Error?) -> Void) {
+            let session = self.session
+            if (session.isRunning) {}
+                else { completion(nil, CameraControllerError.captureSessionIsMissing); return }
+            
+            let settings = AVCapturePhotoSettings()
+            
+            self.photoOutput?.capturePhoto(with: settings, delegate: self)
+            self.photoCaptureCompletionBlock = completion
+        }
+        captureImage {(image, error) in
+            guard let image = image else {
+                print(error ?? "Image capture error")
+                return
+            }
+            
+            try? PHPhotoLibrary.shared().performChangesAndWait {
+                PHAssetChangeRequest.creationRequestForAsset(from: image)
+            }
+        }
+    }
+    
     /*
     func highlightLetters(box: VNRectangleObservation) {
         let xCord = box.topLeft.x * imageView.frame.size.width
@@ -149,13 +188,15 @@ class ScanViewController: UIViewController {
         
         imageView.layer.addSublayer(outline)
     }
-     */
+ 
+ */
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+ 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -194,6 +235,23 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             try imageRequestHandler.perform(self.requests)
         } catch {
             print(error)
+        }
+    }
+}
+
+extension ScanViewController: AVCapturePhotoCaptureDelegate {
+    public func photoOutput(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?,
+                            resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Swift.Error?) {
+        if let error = error { self.photoCaptureCompletionBlock?(nil, error) }
+            
+        else if let buffer = photoSampleBuffer, let data = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: buffer, previewPhotoSampleBuffer: nil),
+            let image = UIImage(data: data) {
+            
+            self.photoCaptureCompletionBlock?(image, nil)
+        }
+            
+        else {
+            self.photoCaptureCompletionBlock?(nil, CameraControllerError.unknown)
         }
     }
 }
