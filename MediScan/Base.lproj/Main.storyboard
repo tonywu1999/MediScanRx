@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Scanner-->
+        <!--Search-->
         <scene sceneID="Jh5-bu-5rk">
             <objects>
                 <viewController id="RxJ-cz-c4I" customClass="SearchViewController" customModule="MediScan" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm4-Bx-PYY">
                                 <rect key="frame" x="120" y="408" width="135" height="30"/>
                                 <color key="backgroundColor" red="0.33637412276609757" green="0.26855519204274148" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="photo">
+                                <state key="normal" title="Photo">
                                     <color key="titleColor" red="1" green="0.33721925149999998" blue="0.36766391500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -87,7 +87,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="afs-Xw-igm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scanner" image="search" id="3AS-ug-bI6"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="3AS-ug-bI6"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Q33-YM-R0W" id="fBX-Fg-rYu"/>
                         <outlet property="inputt" destination="fLp-Lg-Vmd" id="kcb-9q-nKZ"/>
@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="1288.8" y="827.13643178410803"/>
         </scene>
-        <!--Live Camera-->
+        <!--Scan-->
         <scene sceneID="ido-0m-tD2">
             <objects>
                 <viewController id="fWN-qC-K93" customClass="ScanViewController" customModule="MediScan" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,7 +168,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hiJ-vz-p9A"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Live Camera" image="eye-solid" id="GA5-Ta-Z6Q"/>
+                    <tabBarItem key="tabBarItem" title="Scan" image="eye-solid" id="GA5-Ta-Z6Q"/>
                     <connections>
                         <outlet property="drug" destination="Iyw-SO-yV9" id="C8c-5t-bJr"/>
                         <outlet property="imageView" destination="0Fj-Oq-H7H" id="84x-ib-e0M"/>

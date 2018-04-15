@@ -14,7 +14,7 @@ import TesseractOCR
 
 class ScanViewController: UIViewController {
 
-    
+    var drug_list = Drugs()
     @IBOutlet weak var drug: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     var session = AVCaptureSession()
@@ -157,7 +157,10 @@ class ScanViewController: UIViewController {
             tesseract.recognize()
             // 6
             let acquired_text: String = tesseract.recognizedText
-            drug.text = acquired_text.trimmingCharacters(in: .whitespacesAndNewlines)
+            let trimmed = acquired_text.trimmingCharacters(in: .whitespacesAndNewlines)
+            print(trimmed.uppercased())
+            // For some reason cannot print database side effects
+            drug.text = trimmed
         }
         // 7
     }
