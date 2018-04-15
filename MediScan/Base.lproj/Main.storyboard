@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search-->
+        <!--Scanner-->
         <scene sceneID="Jh5-bu-5rk">
             <objects>
                 <viewController id="RxJ-cz-c4I" customClass="SearchViewController" customModule="MediScan" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="439-xh-Mn1">
-                                <rect key="frame" x="90" y="418" width="195" height="80"/>
+                                <rect key="frame" x="90" y="458" width="195" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0E-6k-h3L">
                                         <rect key="frame" x="0.0" y="0.0" width="195" height="30"/>
@@ -40,13 +40,13 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" text="Drug Name" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fLp-Lg-Vmd">
-                                <rect key="frame" x="20" y="110" width="335" height="182"/>
+                                <rect key="frame" x="20" y="130" width="335" height="207"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm4-Bx-PYY">
-                                <rect key="frame" x="120" y="368" width="135" height="30"/>
+                                <rect key="frame" x="120" y="408" width="135" height="30"/>
                                 <color key="backgroundColor" red="0.33637412276609757" green="0.26855519204274148" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="photo">
                                     <color key="titleColor" red="1" green="0.33721925149999998" blue="0.36766391500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,8 +55,8 @@
                                     <action selector="take_photo:" destination="RxJ-cz-c4I" eventType="touchUpInside" id="Z5F-j8-dJj"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Q33-YM-R0W">
-                                <rect key="frame" x="150" y="316" width="75" height="20"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Q33-YM-R0W">
+                                <rect key="frame" x="150" y="356" width="75" height="20"/>
                                 <color key="color" red="1" green="0.33721925149999998" blue="0.36766391500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFd-oJ-Azi">
@@ -72,11 +72,11 @@
                             <constraint firstItem="gm4-Bx-PYY" firstAttribute="top" secondItem="Q33-YM-R0W" secondAttribute="bottom" constant="32" id="9pi-i6-N1m"/>
                             <constraint firstItem="bFd-oJ-Azi" firstAttribute="top" secondItem="afs-Xw-igm" secondAttribute="top" constant="50" id="Hqm-tD-EyW"/>
                             <constraint firstAttribute="trailing" secondItem="fLp-Lg-Vmd" secondAttribute="trailing" constant="20" id="L33-uV-07K"/>
-                            <constraint firstAttribute="bottom" secondItem="fLp-Lg-Vmd" secondAttribute="bottom" constant="375" id="T6x-8l-KZB"/>
+                            <constraint firstAttribute="bottom" secondItem="fLp-Lg-Vmd" secondAttribute="bottom" constant="330" id="T6x-8l-KZB"/>
                             <constraint firstItem="Q33-YM-R0W" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="150" id="Upf-Hc-Wav"/>
                             <constraint firstItem="439-xh-Mn1" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="90" id="XMx-Fs-Zik"/>
-                            <constraint firstItem="fLp-Lg-Vmd" firstAttribute="top" secondItem="SFX-FO-gdm" secondAttribute="top" constant="110" id="arv-Qo-NhW"/>
-                            <constraint firstItem="afs-Xw-igm" firstAttribute="bottom" secondItem="439-xh-Mn1" secondAttribute="bottom" constant="120" id="bkK-av-BG7"/>
+                            <constraint firstItem="fLp-Lg-Vmd" firstAttribute="top" secondItem="SFX-FO-gdm" secondAttribute="top" constant="130" id="arv-Qo-NhW"/>
+                            <constraint firstItem="afs-Xw-igm" firstAttribute="bottom" secondItem="439-xh-Mn1" secondAttribute="bottom" constant="80" id="bkK-av-BG7"/>
                             <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="gm4-Bx-PYY" secondAttribute="trailing" constant="120" id="eTU-K8-unU"/>
                             <constraint firstItem="439-xh-Mn1" firstAttribute="top" secondItem="gm4-Bx-PYY" secondAttribute="bottom" constant="20" id="f8b-iW-vhA"/>
                             <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="Q33-YM-R0W" secondAttribute="trailing" constant="150" id="gKr-Ms-HFd"/>
@@ -87,7 +87,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="afs-Xw-igm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="search" id="3AS-ug-bI6"/>
+                    <tabBarItem key="tabBarItem" title="Scanner" image="search" id="3AS-ug-bI6"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Q33-YM-R0W" id="fBX-Fg-rYu"/>
                         <outlet property="inputt" destination="fLp-Lg-Vmd" id="kcb-9q-nKZ"/>
@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="1288.8" y="827.13643178410803"/>
         </scene>
-        <!--Scanner-->
+        <!--Live Camera-->
         <scene sceneID="ido-0m-tD2">
             <objects>
                 <viewController id="fWN-qC-K93" customClass="ScanViewController" customModule="MediScan" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,45 +107,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Fj-Oq-H7H">
-                                <rect key="frame" x="0.0" y="40" width="375" height="405"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="478"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AfY-Ld-rJl">
-                                <rect key="frame" x="20" y="401" width="335" height="44"/>
+                                <rect key="frame" x="20" y="474" width="335" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfc-8C-Bkc">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="44"/>
-                                        <color key="backgroundColor" red="0.71199917069999996" green="0.88275178109999997" blue="0.76542838219999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
-                                        <state key="normal" title="Scan"/>
-                                        <connections>
-                                            <action selector="pressScan:" destination="fWN-qC-K93" eventType="touchUpInside" id="eo6-ES-cF4"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ej-I1-9QU">
-                                        <rect key="frame" x="172.5" y="0.0" width="162.5" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="44"/>
                                         <color key="backgroundColor" red="0.7119991706546599" green="0.88275178108808294" blue="0.7654283822384359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
-                                        <state key="normal" title="Highlight"/>
+                                        <state key="normal" title="On"/>
                                         <connections>
                                             <action selector="pressButton:" destination="fWN-qC-K93" eventType="touchUpInside" id="Lc0-wd-v9H"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfc-8C-Bkc">
+                                        <rect key="frame" x="172.5" y="0.0" width="162.5" height="44"/>
+                                        <color key="backgroundColor" red="0.71199917069999996" green="0.88275178109999997" blue="0.76542838219999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                        <state key="normal" title="Off"/>
+                                        <connections>
+                                            <action selector="pressScan:" destination="fWN-qC-K93" eventType="touchUpInside" id="eo6-ES-cF4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zp9-bZ-C9m">
+                                <rect key="frame" x="187" y="548" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Text Detector" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1K-NB-Eas">
+                                <rect key="frame" x="20" y="548" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.86322835298116429" green="0.88775097150259064" blue="0.82478257504861241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" red="1" green="0.33721925149999998" blue="0.36766391500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.30619217199999998" green="0.96759808380000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="0Fj-Oq-H7H" secondAttribute="trailing" id="KIZ-SW-fi0"/>
                             <constraint firstItem="0Fj-Oq-H7H" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" id="NST-Xo-bqA"/>
+                            <constraint firstItem="I1K-NB-Eas" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" constant="20" id="OTr-jK-GTS"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="AfY-Ld-rJl" secondAttribute="trailing" constant="20" id="VPj-oA-Pl7"/>
+                            <constraint firstItem="I1K-NB-Eas" firstAttribute="top" secondItem="0Fj-Oq-H7H" secondAttribute="bottom" constant="30" id="Z3e-Bc-QZb"/>
                             <constraint firstItem="AfY-Ld-rJl" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" constant="20" id="bcS-nG-eIp"/>
-                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="0Fj-Oq-H7H" secondAttribute="bottom" constant="173" id="gWi-Ya-9sF"/>
-                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="AfY-Ld-rJl" secondAttribute="bottom" constant="173" id="hy3-Ob-uRz"/>
+                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="I1K-NB-Eas" secondAttribute="trailing" constant="20" id="dFK-jO-cAw"/>
+                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="I1K-NB-Eas" secondAttribute="bottom" constant="30" id="gOQ-2j-Aie"/>
+                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="0Fj-Oq-H7H" secondAttribute="bottom" constant="100" id="gWi-Ya-9sF"/>
+                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="AfY-Ld-rJl" secondAttribute="bottom" constant="100" id="hy3-Ob-uRz"/>
                             <constraint firstItem="0Fj-Oq-H7H" firstAttribute="top" secondItem="hiJ-vz-p9A" secondAttribute="top" constant="20" id="qdk-pU-950"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hiJ-vz-p9A"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scanner" image="eye-solid" id="GA5-Ta-Z6Q"/>
+                    <tabBarItem key="tabBarItem" title="Live Camera" image="eye-solid" id="GA5-Ta-Z6Q"/>
                     <connections>
                         <outlet property="imageView" destination="0Fj-Oq-H7H" id="84x-ib-e0M"/>
                     </connections>
