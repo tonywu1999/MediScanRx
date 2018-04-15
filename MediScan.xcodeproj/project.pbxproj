@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A602688FB6C425503A08529 /* Pods_MediScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B9686CF36FDF9F48B8E0E5 /* Pods_MediScan.framework */; };
+		A332F6C72083188E00FABEDA /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = A332F6C62083188E00FABEDA /* tessdata */; };
+		A332F6CA208318AB00FABEDA /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A332F6C9208318AB00FABEDA /* TesseractOCR.framework */; };
+		A332F6CC208318CC00FABEDA /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A332F6CB208318CC00FABEDA /* CoreImage.framework */; };
+		A332F6CE208318D700FABEDA /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A332F6CD208318D700FABEDA /* libstdc++.tbd */; };
 		A36C2FEF20818DA600B64C7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D091884D20817A2C0025C8DC /* Assets.xcassets */; };
 		A36C2FF32081B49E00B64C7E /* drugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C2FF22081B49E00B64C7E /* drugs.swift */; };
 		A36C2FF52082683400B64C7E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C2FF42082683400B64C7E /* SearchViewController.swift */; };
@@ -38,10 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5DDD5921679D47C1DEF55F6C /* Pods-MediScan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediScan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediScan/Pods-MediScan.debug.xcconfig"; sourceTree = "<group>"; };
+		A332F6C62083188E00FABEDA /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		A332F6C9208318AB00FABEDA /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A332F6CB208318CC00FABEDA /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		A332F6CD208318D700FABEDA /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		A36C2FF22081B49E00B64C7E /* drugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drugs.swift; sourceTree = "<group>"; };
 		A36C2FF42082683400B64C7E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A36C2FFA208287DB00B64C7E /* database.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.txt; sourceTree = "<group>"; };
 		A36C2FFC2082A4D000B64C7E /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		A8B9686CF36FDF9F48B8E0E5 /* Pods_MediScan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediScan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8AED7B2EB501125AB14A3C3 /* Pods-MediScan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediScan.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediScan/Pods-MediScan.release.xcconfig"; sourceTree = "<group>"; };
 		D091884320817A2B0025C8DC /* MediScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D091884620817A2B0025C8DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D091884820817A2B0025C8DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A332F6CE208318D700FABEDA /* libstdc++.tbd in Frameworks */,
+				A332F6CC208318CC00FABEDA /* CoreImage.framework in Frameworks */,
+				A332F6CA208318AB00FABEDA /* TesseractOCR.framework in Frameworks */,
+				6A602688FB6C425503A08529 /* Pods_MediScan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,13 +98,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		222FA3866B9717FC10A37B41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DDD5921679D47C1DEF55F6C /* Pods-MediScan.debug.xcconfig */,
+				C8AED7B2EB501125AB14A3C3 /* Pods-MediScan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D055A85CF24D45B8655F5485 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A332F6CD208318D700FABEDA /* libstdc++.tbd */,
+				A332F6CB208318CC00FABEDA /* CoreImage.framework */,
+				A332F6C9208318AB00FABEDA /* TesseractOCR.framework */,
+				A8B9686CF36FDF9F48B8E0E5 /* Pods_MediScan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D091883A20817A2B0025C8DC = {
 			isa = PBXGroup;
 			children = (
+				A332F6C62083188E00FABEDA /* tessdata */,
 				D091884520817A2B0025C8DC /* MediScan */,
 				D091885A20817A2C0025C8DC /* MediScanTests */,
 				D091886520817A2C0025C8DC /* MediScanUITests */,
 				D091884420817A2B0025C8DC /* Products */,
+				222FA3866B9717FC10A37B41 /* Pods */,
+				D055A85CF24D45B8655F5485 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D091886B20817A2C0025C8DC /* Build configuration list for PBXNativeTarget "MediScan" */;
 			buildPhases = (
+				0B13F4035671B3E932B63390 /* [CP] Check Pods Manifest.lock */,
 				D091883F20817A2B0025C8DC /* Sources */,
 				D091884020817A2B0025C8DC /* Frameworks */,
 				D091884120817A2B0025C8DC /* Resources */,
+				30B9AC22FFFBEF2DA63E430C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +284,7 @@
 			files = (
 				D091885120817A2C0025C8DC /* LaunchScreen.storyboard in Resources */,
 				A36C2FEF20818DA600B64C7E /* Assets.xcassets in Resources */,
+				A332F6C72083188E00FABEDA /* tessdata in Resources */,
 				D091884C20817A2B0025C8DC /* Main.storyboard in Resources */,
 				A36C2FFB208287DB00B64C7E /* database.txt in Resources */,
 			);
@@ -263,6 +305,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B13F4035671B3E932B63390 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MediScan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30B9AC22FFFBEF2DA63E430C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MediScan/Pods-MediScan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TesseractOCRiOS/TesseractOCR.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TesseractOCR.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MediScan/Pods-MediScan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D091883F20817A2B0025C8DC /* Sources */ = {
@@ -444,10 +525,12 @@
 		};
 		D091886C20817A2C0025C8DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DDD5921679D47C1DEF55F6C /* Pods-MediScan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7ADEM444M7;
+				DEVELOPMENT_TEAM = WZL6QW8CTV;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MediScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,10 +545,12 @@
 		};
 		D091886D20817A2C0025C8DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8AED7B2EB501125AB14A3C3 /* Pods-MediScan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7ADEM444M7;
+				DEVELOPMENT_TEAM = WZL6QW8CTV;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MediScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
