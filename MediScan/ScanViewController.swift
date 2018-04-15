@@ -17,6 +17,7 @@ class ScanViewController: UIViewController {
     var session = AVCaptureSession()
     var requests = [VNRequest]()
     var count = 0
+    var true_false = true
     
     // Setting up Camera
     func startLiveVideo() {
@@ -45,7 +46,6 @@ class ScanViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         startLiveVideo()
-        startTextDetection()
     }
     
     override func viewDidLayoutSubviews() {
@@ -56,7 +56,7 @@ class ScanViewController: UIViewController {
     
     func startTextDetection() {
         let textRequest = VNDetectTextRectanglesRequest(completionHandler: self.detectTextHandler)
-        textRequest.reportCharacterBoxes = true
+        textRequest.reportCharacterBoxes = true_false
         self.requests = [textRequest]
     }
     
@@ -126,6 +126,14 @@ class ScanViewController: UIViewController {
         imageView.layer.addSublayer(outline)
     }
     
+    @IBAction func pressScan(_ sender: UIButton) {
+        true_false = false
+        startTextDetection()
+    }
+    @IBAction func pressButton(_ sender: UIButton) {
+        true_false = true
+        startTextDetection()
+    }
     /*
     func highlightLetters(box: VNRectangleObservation) {
         let xCord = box.topLeft.x * imageView.frame.size.width

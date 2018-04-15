@@ -138,33 +138,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Fj-Oq-H7H">
-                                <rect key="frame" x="0.0" y="40" width="375" height="447"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="513"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Side Effects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y63-AM-uBq">
-                                <rect key="frame" x="50" y="497" width="275" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ej-I1-9QU">
-                                <rect key="frame" x="110" y="443" width="155" height="44"/>
-                                <color key="backgroundColor" red="0.7119991706546599" green="0.88275178108808294" blue="0.7654283822384359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
-                                <state key="normal" title="Scan"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AfY-Ld-rJl">
+                                <rect key="frame" x="20" y="509" width="335" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfc-8C-Bkc">
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="44"/>
+                                        <color key="backgroundColor" red="0.71199917069999996" green="0.88275178109999997" blue="0.76542838219999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                        <state key="normal" title="Scan"/>
+                                        <connections>
+                                            <action selector="pressScan:" destination="fWN-qC-K93" eventType="touchUpInside" id="eo6-ES-cF4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ej-I1-9QU">
+                                        <rect key="frame" x="172.5" y="0.0" width="162.5" height="44"/>
+                                        <color key="backgroundColor" red="0.7119991706546599" green="0.88275178108808294" blue="0.7654283822384359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                        <state key="normal" title="Highlight"/>
+                                        <connections>
+                                            <action selector="pressButton:" destination="fWN-qC-K93" eventType="touchUpInside" id="Lc0-wd-v9H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.30619217199999998" green="0.96759808380000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Ej-I1-9QU" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" constant="110" id="JNo-uV-M5v"/>
+                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="0Fj-Oq-H7H" secondAttribute="bottom" constant="65" id="4AS-6J-JlH"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="0Fj-Oq-H7H" secondAttribute="trailing" id="KIZ-SW-fi0"/>
-                            <constraint firstItem="Y63-AM-uBq" firstAttribute="top" secondItem="6Ej-I1-9QU" secondAttribute="bottom" constant="10" id="MNj-cg-B17"/>
                             <constraint firstItem="0Fj-Oq-H7H" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" id="NST-Xo-bqA"/>
-                            <constraint firstItem="Y63-AM-uBq" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" constant="50" id="T5F-Gf-jgD"/>
-                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="Y63-AM-uBq" secondAttribute="bottom" constant="100" id="anF-tG-opQ"/>
-                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="Y63-AM-uBq" secondAttribute="trailing" constant="50" id="mv2-s9-9Fx"/>
-                            <constraint firstItem="Y63-AM-uBq" firstAttribute="top" secondItem="0Fj-Oq-H7H" secondAttribute="bottom" constant="10" id="q3C-BS-rxv"/>
+                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="AfY-Ld-rJl" secondAttribute="bottom" constant="65" id="Q8U-D3-eiX"/>
+                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="AfY-Ld-rJl" secondAttribute="trailing" constant="20" id="VPj-oA-Pl7"/>
+                            <constraint firstItem="AfY-Ld-rJl" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" constant="20" id="bcS-nG-eIp"/>
                             <constraint firstItem="0Fj-Oq-H7H" firstAttribute="top" secondItem="hiJ-vz-p9A" secondAttribute="top" constant="20" id="qdk-pU-950"/>
-                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="6Ej-I1-9QU" secondAttribute="trailing" constant="110" id="vKK-eL-EOA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hiJ-vz-p9A"/>
                     </view>
