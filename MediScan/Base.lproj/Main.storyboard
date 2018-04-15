@@ -18,33 +18,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0E-6k-h3L">
-                                <rect key="frame" x="70" y="388" width="235" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.33721925145695464" blue="0.36766391500028939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Side Effects"/>
-                                <connections>
-                                    <action selector="side_effects:" destination="RxJ-cz-c4I" eventType="touchUpInside" id="pTR-ua-rlp"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Drug Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mqs-T8-YTG">
-                                <rect key="frame" x="50" y="288" width="275" height="30"/>
-                                <nil key="textColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="439-xh-Mn1">
+                                <rect key="frame" x="90" y="418" width="195" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0E-6k-h3L">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.33721925145695464" blue="0.36766391500028939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Side Effects"/>
+                                        <connections>
+                                            <action selector="side_effects:" destination="RxJ-cz-c4I" eventType="touchUpInside" id="pTR-ua-rlp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyI-am-Loz">
+                                        <rect key="frame" x="0.0" y="50" width="195" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.33721925145695464" blue="0.36766391500028939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Main Usage"/>
+                                        <connections>
+                                            <action selector="side_effects:" destination="RxJ-cz-c4I" eventType="touchUpInside" id="6cb-Rg-Xrf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" text="Drug Name" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fLp-Lg-Vmd">
+                                <rect key="frame" x="20" y="110" width="335" height="182"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm4-Bx-PYY">
+                                <rect key="frame" x="120" y="368" width="135" height="30"/>
+                                <color key="backgroundColor" red="0.33637412276609757" green="0.26855519204274148" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="photo">
+                                    <color key="titleColor" red="1" green="0.33721925149999998" blue="0.36766391500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="drug_name:" destination="oAJ-5k-I5R" eventType="editingDidEnd" id="jnp-gR-dEI"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyI-am-Loz">
-                                <rect key="frame" x="70" y="438" width="235" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.33721925145695464" blue="0.36766391500028939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Main Usage"/>
-                                <connections>
-                                    <action selector="side_effects:" destination="RxJ-cz-c4I" eventType="touchUpInside" id="6cb-Rg-Xrf"/>
+                                    <action selector="take_photo:" destination="RxJ-cz-c4I" eventType="touchUpInside" id="Z5F-j8-dJj"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Q33-YM-R0W">
+                                <rect key="frame" x="150" y="316" width="75" height="20"/>
+                                <color key="color" red="1" green="0.33721925149999998" blue="0.36766391500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFd-oJ-Azi">
-                                <rect key="frame" x="24" y="187" width="327" height="21"/>
+                                <rect key="frame" x="24" y="70" width="327" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,29 +68,33 @@
                         </subviews>
                         <color key="backgroundColor" red="0.30619217199999998" green="0.96759808380000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Mqs-T8-YTG" firstAttribute="top" secondItem="bFd-oJ-Azi" secondAttribute="bottom" constant="80" id="4Fr-O8-H9A"/>
-                            <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="Y0E-6k-h3L" secondAttribute="trailing" constant="70" id="5nf-K5-NVi"/>
-                            <constraint firstItem="bFd-oJ-Azi" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="24" id="8gG-Jj-Og6"/>
-                            <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="Mqs-T8-YTG" secondAttribute="trailing" constant="50" id="9h4-d4-y8D"/>
-                            <constraint firstItem="Y0E-6k-h3L" firstAttribute="top" secondItem="Mqs-T8-YTG" secondAttribute="bottom" constant="70" id="KBh-pL-Lwj"/>
-                            <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="bFd-oJ-Azi" secondAttribute="trailing" constant="24" id="NgG-ze-4Zk"/>
-                            <constraint firstItem="afs-Xw-igm" firstAttribute="bottom" secondItem="IyI-am-Loz" secondAttribute="bottom" constant="150" id="Pzu-1D-0TT"/>
-                            <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="IyI-am-Loz" secondAttribute="trailing" constant="70" id="S7K-Bl-ctR"/>
-                            <constraint firstItem="Mqs-T8-YTG" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="50" id="SHI-8u-IeR"/>
-                            <constraint firstItem="IyI-am-Loz" firstAttribute="top" secondItem="Y0E-6k-h3L" secondAttribute="bottom" constant="20" id="b79-y8-jY5"/>
-                            <constraint firstItem="IyI-am-Loz" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="70" id="cr9-Sx-yOO"/>
-                            <constraint firstItem="Y0E-6k-h3L" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="70" id="qzd-qO-SN5"/>
+                            <constraint firstItem="fLp-Lg-Vmd" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="20" id="8Ld-r7-Lim"/>
+                            <constraint firstItem="gm4-Bx-PYY" firstAttribute="top" secondItem="Q33-YM-R0W" secondAttribute="bottom" constant="32" id="9pi-i6-N1m"/>
+                            <constraint firstItem="bFd-oJ-Azi" firstAttribute="top" secondItem="afs-Xw-igm" secondAttribute="top" constant="50" id="Hqm-tD-EyW"/>
+                            <constraint firstAttribute="trailing" secondItem="fLp-Lg-Vmd" secondAttribute="trailing" constant="20" id="L33-uV-07K"/>
+                            <constraint firstAttribute="bottom" secondItem="fLp-Lg-Vmd" secondAttribute="bottom" constant="375" id="T6x-8l-KZB"/>
+                            <constraint firstItem="Q33-YM-R0W" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="150" id="Upf-Hc-Wav"/>
+                            <constraint firstItem="439-xh-Mn1" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="90" id="XMx-Fs-Zik"/>
+                            <constraint firstItem="fLp-Lg-Vmd" firstAttribute="top" secondItem="SFX-FO-gdm" secondAttribute="top" constant="110" id="arv-Qo-NhW"/>
+                            <constraint firstItem="afs-Xw-igm" firstAttribute="bottom" secondItem="439-xh-Mn1" secondAttribute="bottom" constant="120" id="bkK-av-BG7"/>
+                            <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="gm4-Bx-PYY" secondAttribute="trailing" constant="120" id="eTU-K8-unU"/>
+                            <constraint firstItem="439-xh-Mn1" firstAttribute="top" secondItem="gm4-Bx-PYY" secondAttribute="bottom" constant="20" id="f8b-iW-vhA"/>
+                            <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="Q33-YM-R0W" secondAttribute="trailing" constant="150" id="gKr-Ms-HFd"/>
+                            <constraint firstItem="bFd-oJ-Azi" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="24" id="gMo-00-srH"/>
+                            <constraint firstItem="gm4-Bx-PYY" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="120" id="vdj-5I-2I9"/>
+                            <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="439-xh-Mn1" secondAttribute="trailing" constant="90" id="yKj-xh-R6K"/>
+                            <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="bFd-oJ-Azi" secondAttribute="trailing" constant="24" id="zJ0-Va-rvM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="afs-Xw-igm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="search" id="3AS-ug-bI6"/>
                     <connections>
-                        <outlet property="drug_name" destination="Mqs-T8-YTG" id="7kR-DN-SpR"/>
+                        <outlet property="activityIndicator" destination="Q33-YM-R0W" id="fBX-Fg-rYu"/>
+                        <outlet property="inputt" destination="fLp-Lg-Vmd" id="kcb-9q-nKZ"/>
                         <outlet property="result" destination="bFd-oJ-Azi" id="H19-z6-z0d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gq2-R7-prY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="oAJ-5k-I5R" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1288.8" y="827.13643178410803"/>
         </scene>
