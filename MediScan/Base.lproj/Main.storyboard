@@ -133,15 +133,16 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrw-Te-7Vg">
-                                <rect key="frame" x="50" y="544" width="275" height="30"/>
+                                <rect key="frame" x="100" y="520" width="175" height="38"/>
                                 <color key="backgroundColor" red="0.7750574987141795" green="0.77286078535341574" blue="0.79290803108808294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Scan"/>
                                 <connections>
                                     <action selector="capture_image:" destination="fWN-qC-K93" eventType="touchUpInside" id="hQH-xU-aUY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyw-SO-yV9">
-                                <rect key="frame" x="50" y="582" width="275" height="21"/>
+                                <rect key="frame" x="50" y="566" width="275" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -150,10 +151,10 @@
                         <color key="backgroundColor" red="0.30619217199999998" green="0.96759808380000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="Iyw-SO-yV9" secondAttribute="bottom" constant="15" id="6zL-Lb-HEn"/>
-                            <constraint firstItem="Yrw-Te-7Vg" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" constant="50" id="IVt-Zq-gpW"/>
+                            <constraint firstItem="Yrw-Te-7Vg" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" constant="100" id="IVt-Zq-gpW"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="0Fj-Oq-H7H" secondAttribute="trailing" id="KIZ-SW-fi0"/>
                             <constraint firstItem="0Fj-Oq-H7H" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" id="NST-Xo-bqA"/>
-                            <constraint firstItem="Yrw-Te-7Vg" firstAttribute="top" secondItem="0Fj-Oq-H7H" secondAttribute="bottom" constant="26" id="SjU-rN-mi4"/>
+                            <constraint firstItem="Yrw-Te-7Vg" firstAttribute="top" secondItem="0Fj-Oq-H7H" secondAttribute="bottom" constant="2" id="SjU-rN-mi4"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="AfY-Ld-rJl" secondAttribute="trailing" constant="20" id="VPj-oA-Pl7"/>
                             <constraint firstItem="Iyw-SO-yV9" firstAttribute="leading" secondItem="hiJ-vz-p9A" secondAttribute="leading" constant="50" id="VtT-Da-Kin"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="Iyw-SO-yV9" secondAttribute="trailing" constant="50" id="Wky-Ar-cxf"/>
@@ -161,9 +162,9 @@
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="0Fj-Oq-H7H" secondAttribute="bottom" constant="100" id="gWi-Ya-9sF"/>
                             <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="AfY-Ld-rJl" secondAttribute="bottom" constant="100" id="hy3-Ob-uRz"/>
                             <constraint firstItem="Iyw-SO-yV9" firstAttribute="top" secondItem="Yrw-Te-7Vg" secondAttribute="bottom" constant="8" id="jPu-Er-UAP"/>
-                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="Yrw-Te-7Vg" secondAttribute="trailing" constant="50" id="mjf-a2-fIr"/>
+                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="trailing" secondItem="Yrw-Te-7Vg" secondAttribute="trailing" constant="100" id="mjf-a2-fIr"/>
                             <constraint firstItem="0Fj-Oq-H7H" firstAttribute="top" secondItem="hiJ-vz-p9A" secondAttribute="top" constant="20" id="qdk-pU-950"/>
-                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="Yrw-Te-7Vg" secondAttribute="bottom" constant="44" id="udf-Zy-lsV"/>
+                            <constraint firstItem="hiJ-vz-p9A" firstAttribute="bottom" secondItem="Yrw-Te-7Vg" secondAttribute="bottom" constant="60" id="udf-Zy-lsV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hiJ-vz-p9A"/>
                     </view>
