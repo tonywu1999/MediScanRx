@@ -190,7 +190,8 @@ class ScanViewController: UIViewController {
                 print(error ?? "Image capture error")
                 return
             }
-            let scaledImage = image.scaleImage(640)
+            let selectedPhoto = image as UIImage
+            let scaledImage = selectedPhoto.scaleImage(640)
             self.performImageRecognition(scaledImage!)
             
             try? PHPhotoLibrary.shared().performChangesAndWait {
