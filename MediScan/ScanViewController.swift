@@ -219,7 +219,7 @@ class ScanViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        startTextDetection()
         // Do any additional setup after loading the view.
     }
  
