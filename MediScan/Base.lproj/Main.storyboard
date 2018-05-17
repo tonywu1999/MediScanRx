@@ -113,7 +113,7 @@
         <!--View Controller-->
         <scene sceneID="aem-jh-0k1">
             <objects>
-                <viewController id="eg7-AC-ndM" sceneMemberID="viewController">
+                <viewController id="eg7-AC-ndM" customClass="ViewController" customModule="MediScan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mIv-Jh-uL7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Krs-FO-dFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="172"/>
+            <point key="canvasLocation" x="2356" y="171.81409295352324"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ai9-Rx-cCq">
