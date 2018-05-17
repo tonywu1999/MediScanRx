@@ -17,6 +17,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var inputt: UITextView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var side_effect: UIButton!
+    @IBOutlet weak var main_usage: UIButton!
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return (true)
@@ -52,6 +55,8 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         drug_list.set_up_dictionary()
+        side_effect.layer.cornerRadius = 10
+        main_usage.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
 

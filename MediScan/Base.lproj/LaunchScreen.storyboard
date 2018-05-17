@@ -19,27 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gx-1I-ILN">
-                                <rect key="frame" x="16" y="43" width="343" height="580.5"/>
+                                <rect key="frame" x="16" y="43" width="343" height="581"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MediScanRx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kej-ya-1FK">
-                                        <rect key="frame" x="20" y="20" width="303" height="32.5"/>
+                                        <rect key="frame" x="20" y="20" width="303" height="33"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="LaunchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wcu-BQ-N2g">
-                                        <rect key="frame" x="51" y="202" width="241" height="228.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Icon-App-60x60" translatesAutoresizingMaskIntoConstraints="NO" id="Wcu-BQ-N2g">
+                                        <rect key="frame" x="258" y="499" width="85" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="CiD-Jj-8nm"/>
+                                            <constraint firstAttribute="height" constant="81" id="M2s-J2-M6o"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.32407369139999997" green="1" blue="0.34098488399999999" alpha="0.56593860039999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.5725490196078431" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Wcu-BQ-N2g" firstAttribute="leading" secondItem="7Gx-1I-ILN" secondAttribute="leading" constant="51" id="11i-gR-yEC"/>
-                                    <constraint firstAttribute="bottom" secondItem="Wcu-BQ-N2g" secondAttribute="bottom" constant="150" id="8Kq-zR-BbM"/>
-                                    <constraint firstAttribute="trailing" secondItem="Wcu-BQ-N2g" secondAttribute="trailing" constant="51" id="PCd-9o-OIU"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wcu-BQ-N2g" secondAttribute="bottom" constant="1" id="DmV-7w-dCV"/>
                                     <constraint firstItem="Kej-ya-1FK" firstAttribute="top" secondItem="7Gx-1I-ILN" secondAttribute="top" constant="20" id="cYN-0H-loM"/>
                                     <constraint firstAttribute="trailing" secondItem="Kej-ya-1FK" secondAttribute="trailing" constant="20" id="fhn-5J-jzf"/>
                                     <constraint firstItem="Kej-ya-1FK" firstAttribute="leading" secondItem="7Gx-1I-ILN" secondAttribute="leading" constant="20" id="fp7-dN-FnT"/>
-                                    <constraint firstItem="Wcu-BQ-N2g" firstAttribute="top" secondItem="Kej-ya-1FK" secondAttribute="bottom" constant="149.5" id="qen-jT-kSU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wcu-BQ-N2g" secondAttribute="trailing" id="jjy-8G-2nP"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -59,6 +61,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchLogo" width="1200" height="1223"/>
+        <image name="Icon-App-60x60" width="40" height="40"/>
     </resources>
 </document>
