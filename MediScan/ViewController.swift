@@ -13,7 +13,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     var drug_list = Drugs()
-    let elements = ["dog", "cat", "horse", "tony", "allen", "alex", "eashan", "patrick", "kevin", "andrew", "erlun", "bobby", "chuck", "elton"]
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -30,6 +29,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Returns number of Rows in each section
         return drug_list.main_usages.count
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
