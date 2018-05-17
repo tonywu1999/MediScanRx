@@ -138,8 +138,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLe-wn-8g3">
                                                             <rect key="frame" x="10" y="5" width="355" height="89.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-Zm-Jf3">
-                                                                    <rect key="frame" x="22" y="34" width="87" height="21"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-Zm-Jf3">
+                                                                    <rect key="frame" x="8" y="8" width="339" height="73.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -147,10 +147,10 @@
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.81659542160595777" green="1" blue="0.71225225567055928" alpha="0.51001320422535212" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstItem="RSW-Zm-Jf3" firstAttribute="top" secondItem="BLe-wn-8g3" secondAttribute="top" constant="34" id="Eep-9s-Efu"/>
-                                                                <constraint firstAttribute="bottom" secondItem="RSW-Zm-Jf3" secondAttribute="bottom" constant="34.5" id="MS9-8K-OAd"/>
-                                                                <constraint firstItem="RSW-Zm-Jf3" firstAttribute="leading" secondItem="BLe-wn-8g3" secondAttribute="leading" constant="22" id="ld7-cT-LLE"/>
-                                                                <constraint firstAttribute="trailing" secondItem="RSW-Zm-Jf3" secondAttribute="trailing" constant="246" id="nkm-Hf-evK"/>
+                                                                <constraint firstItem="RSW-Zm-Jf3" firstAttribute="leading" secondItem="BLe-wn-8g3" secondAttribute="leading" constant="8" id="Acy-Qd-nOw"/>
+                                                                <constraint firstAttribute="bottom" secondItem="RSW-Zm-Jf3" secondAttribute="bottom" constant="8" id="c1L-vi-Ldu"/>
+                                                                <constraint firstItem="RSW-Zm-Jf3" firstAttribute="top" secondItem="BLe-wn-8g3" secondAttribute="top" constant="8" id="mt6-L2-SUN"/>
+                                                                <constraint firstAttribute="trailing" secondItem="RSW-Zm-Jf3" secondAttribute="trailing" constant="8" id="nIG-2x-5LB"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>

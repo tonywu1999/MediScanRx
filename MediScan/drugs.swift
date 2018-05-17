@@ -14,11 +14,13 @@ class Drugs {
     var drug_list: [String:Int]
     var side_effects: [String]
     var main_usages: [String]
+    var drugs: [String]
     
     init() {
         drug_list = [String: Int]()
         side_effects = [String]()
         main_usages = [String]()
+        drugs = [String]()
     }
     
     func read() -> String {
@@ -39,6 +41,10 @@ class Drugs {
         for drug in lines {
             var categories: [String] = drug.components(separatedBy: "\t")
             drug_list[categories[0].uppercased()] = count
+            if(categories[0] == "Drug Name") {
+                break;
+            }
+            drugs.append(categories[0])
             side_effects.append(categories[1])
             main_usages.append(categories[2])
             count = count + 1
