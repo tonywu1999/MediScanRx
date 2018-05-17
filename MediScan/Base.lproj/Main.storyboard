@@ -147,6 +147,9 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfY-Cc-tCN">
                                                                     <rect key="frame" x="303" y="32" width="25" height="25"/>
                                                                     <state key="normal" image="eye-solid"/>
+                                                                    <connections>
+                                                                        <action selector="add:" destination="XOh-jB-PyC" eventType="touchUpInside" id="LNE-j6-CaR"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.81659542160595777" green="1" blue="0.71225225567055928" alpha="0.51001320422535212" colorSpace="custom" customColorSpace="sRGB"/>

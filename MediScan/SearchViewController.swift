@@ -65,6 +65,13 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if let x = UserDefaults.standard.object(forKey: "my_drug") as? String {
+            
+            inputt.text = x
+        }
+    }
+    
     @IBAction func side_effects(_ sender: UIButton) {
         let title = sender.title(for: .normal)!
         let user_input: String = inputt.text!

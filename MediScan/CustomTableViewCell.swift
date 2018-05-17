@@ -13,6 +13,10 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var drug_label: UILabel!
     
+    @IBAction func add(_ sender: UIButton) {
+        let x: String = drug_label.text!
+        UserDefaults.standard.set(x, forKey: "my_drug")
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
