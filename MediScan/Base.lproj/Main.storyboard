@@ -138,19 +138,26 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLe-wn-8g3">
                                                             <rect key="frame" x="10" y="5" width="355" height="89.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-Zm-Jf3">
-                                                                    <rect key="frame" x="8" y="8" width="339" height="73.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Drug Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-Zm-Jf3">
+                                                                    <rect key="frame" x="34" y="34" width="239" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfY-Cc-tCN">
+                                                                    <rect key="frame" x="303" y="32" width="25" height="25"/>
+                                                                    <state key="normal" image="eye-solid"/>
+                                                                </button>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.81659542160595777" green="1" blue="0.71225225567055928" alpha="0.51001320422535212" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstItem="RSW-Zm-Jf3" firstAttribute="leading" secondItem="BLe-wn-8g3" secondAttribute="leading" constant="8" id="Acy-Qd-nOw"/>
-                                                                <constraint firstAttribute="bottom" secondItem="RSW-Zm-Jf3" secondAttribute="bottom" constant="8" id="c1L-vi-Ldu"/>
-                                                                <constraint firstItem="RSW-Zm-Jf3" firstAttribute="top" secondItem="BLe-wn-8g3" secondAttribute="top" constant="8" id="mt6-L2-SUN"/>
-                                                                <constraint firstAttribute="trailing" secondItem="RSW-Zm-Jf3" secondAttribute="trailing" constant="8" id="nIG-2x-5LB"/>
+                                                                <constraint firstItem="RSW-Zm-Jf3" firstAttribute="top" secondItem="BLe-wn-8g3" secondAttribute="top" constant="34" id="4vl-Q9-fdy"/>
+                                                                <constraint firstItem="RSW-Zm-Jf3" firstAttribute="leading" secondItem="BLe-wn-8g3" secondAttribute="leading" constant="34" id="Kmn-ep-LPm"/>
+                                                                <constraint firstAttribute="bottom" secondItem="RSW-Zm-Jf3" secondAttribute="bottom" constant="35" id="LX8-Yz-NY3"/>
+                                                                <constraint firstAttribute="bottom" secondItem="lfY-Cc-tCN" secondAttribute="bottom" constant="32.5" id="U3U-RC-rcK"/>
+                                                                <constraint firstAttribute="trailing" secondItem="lfY-Cc-tCN" secondAttribute="trailing" constant="27" id="e5F-O0-pV4"/>
+                                                                <constraint firstItem="lfY-Cc-tCN" firstAttribute="leading" secondItem="RSW-Zm-Jf3" secondAttribute="trailing" constant="30" id="ki5-fE-Pa3"/>
+                                                                <constraint firstItem="lfY-Cc-tCN" firstAttribute="top" secondItem="BLe-wn-8g3" secondAttribute="top" constant="32" id="oIE-MN-eMg"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -218,6 +225,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="eye-solid" width="25" height="25"/>
         <image name="media-pict-camera" width="25" height="25"/>
         <image name="search" width="25" height="25"/>
     </resources>
