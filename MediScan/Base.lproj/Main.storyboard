@@ -139,28 +139,18 @@
                                                             <rect key="frame" x="10" y="5" width="355" height="89.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Drug Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-Zm-Jf3">
-                                                                    <rect key="frame" x="34" y="34" width="239" height="20.5"/>
+                                                                    <rect key="frame" x="34" y="34" width="287" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfY-Cc-tCN">
-                                                                    <rect key="frame" x="303" y="32" width="25" height="25"/>
-                                                                    <state key="normal" image="eye-solid"/>
-                                                                    <connections>
-                                                                        <action selector="add:" destination="XOh-jB-PyC" eventType="touchUpInside" id="LNE-j6-CaR"/>
-                                                                    </connections>
-                                                                </button>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.81659542160595777" green="1" blue="0.71225225567055928" alpha="0.51001320422535212" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="RSW-Zm-Jf3" firstAttribute="top" secondItem="BLe-wn-8g3" secondAttribute="top" constant="34" id="4vl-Q9-fdy"/>
+                                                                <constraint firstAttribute="trailing" secondItem="RSW-Zm-Jf3" secondAttribute="trailing" constant="34" id="HVb-GA-nPm"/>
                                                                 <constraint firstItem="RSW-Zm-Jf3" firstAttribute="leading" secondItem="BLe-wn-8g3" secondAttribute="leading" constant="34" id="Kmn-ep-LPm"/>
                                                                 <constraint firstAttribute="bottom" secondItem="RSW-Zm-Jf3" secondAttribute="bottom" constant="35" id="LX8-Yz-NY3"/>
-                                                                <constraint firstAttribute="bottom" secondItem="lfY-Cc-tCN" secondAttribute="bottom" constant="32.5" id="U3U-RC-rcK"/>
-                                                                <constraint firstAttribute="trailing" secondItem="lfY-Cc-tCN" secondAttribute="trailing" constant="27" id="e5F-O0-pV4"/>
-                                                                <constraint firstItem="lfY-Cc-tCN" firstAttribute="leading" secondItem="RSW-Zm-Jf3" secondAttribute="trailing" constant="30" id="ki5-fE-Pa3"/>
-                                                                <constraint firstItem="lfY-Cc-tCN" firstAttribute="top" secondItem="BLe-wn-8g3" secondAttribute="top" constant="32" id="oIE-MN-eMg"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -216,32 +206,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyn-kq-OZq">
-                                <rect key="frame" x="122" y="105" width="130" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyn-kq-OZq">
+                                <rect key="frame" x="10" y="96" width="355" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4a-eE-PL9">
-                                <rect key="frame" x="147" y="313" width="81" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="rjh-cB-Wx9">
+                                <rect key="frame" x="20" y="210" width="96.5" height="141"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Usage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdU-BD-wfo">
+                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Side Effects:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rju-6b-wKs">
+                                        <rect key="frame" x="0.0" y="120.5" width="96.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCw-NJ-fFr">
+                                <rect key="frame" x="150" y="463" width="75" height="25"/>
+                                <state key="normal" image="eye-solid"/>
+                                <connections>
+                                    <action selector="add_favorite:" destination="ACi-Xz-Pos" eventType="touchUpInside" id="Ekh-zT-4QU"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="QLi-j3-esd">
+                                <rect key="frame" x="160" y="197" width="165" height="167"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Usage_Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4a-eE-PL9">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Effect_Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1a-at-Btf">
+                                        <rect key="frame" x="0.0" y="133.5" width="165" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rjh-cB-Wx9" firstAttribute="leading" secondItem="BY2-FW-iqk" secondAttribute="leading" constant="20" id="37G-eT-fXG"/>
+                            <constraint firstItem="BY2-FW-iqk" firstAttribute="bottom" secondItem="pCw-NJ-fFr" secondAttribute="bottom" constant="130" id="3gf-eC-jeD"/>
+                            <constraint firstItem="rjh-cB-Wx9" firstAttribute="top" secondItem="Zyn-kq-OZq" secondAttribute="bottom" constant="68.5" id="8Kp-2r-VT7"/>
+                            <constraint firstItem="pCw-NJ-fFr" firstAttribute="top" secondItem="QLi-j3-esd" secondAttribute="bottom" constant="99" id="E8s-fj-7X1"/>
+                            <constraint firstItem="pCw-NJ-fFr" firstAttribute="leading" secondItem="BY2-FW-iqk" secondAttribute="leading" constant="150" id="Jir-ez-XEA"/>
+                            <constraint firstItem="BY2-FW-iqk" firstAttribute="trailing" secondItem="pCw-NJ-fFr" secondAttribute="trailing" constant="150" id="JuG-iz-ni4"/>
+                            <constraint firstItem="QLi-j3-esd" firstAttribute="leading" secondItem="rjh-cB-Wx9" secondAttribute="trailing" constant="43.5" id="VZ7-8E-sun"/>
+                            <constraint firstItem="Zyn-kq-OZq" firstAttribute="top" secondItem="BY2-FW-iqk" secondAttribute="top" constant="32" id="c9V-TY-BQG"/>
+                            <constraint firstItem="BY2-FW-iqk" firstAttribute="bottom" secondItem="QLi-j3-esd" secondAttribute="bottom" constant="254" id="eQf-LM-KMS"/>
+                            <constraint firstItem="Zyn-kq-OZq" firstAttribute="leading" secondItem="BY2-FW-iqk" secondAttribute="leading" constant="10" id="f2F-Ui-Qwu"/>
+                            <constraint firstItem="BY2-FW-iqk" firstAttribute="trailing" secondItem="Zyn-kq-OZq" secondAttribute="trailing" constant="10" id="gL2-hp-lLg"/>
+                            <constraint firstItem="BY2-FW-iqk" firstAttribute="trailing" secondItem="QLi-j3-esd" secondAttribute="trailing" constant="50" id="iPf-OY-dPM"/>
+                            <constraint firstItem="BY2-FW-iqk" firstAttribute="bottom" secondItem="rjh-cB-Wx9" secondAttribute="bottom" constant="267" id="zR6-Xi-358"/>
+                            <constraint firstItem="QLi-j3-esd" firstAttribute="top" secondItem="Zyn-kq-OZq" secondAttribute="bottom" constant="55.5" id="zls-qq-Ti7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BY2-FW-iqk"/>
                     </view>
                     <connections>
                         <outlet property="drug_name" destination="Zyn-kq-OZq" id="RkI-vO-THC"/>
                         <outlet property="main_usage" destination="z4a-eE-PL9" id="xXV-XU-dhF"/>
+                        <outlet property="side_effects" destination="G1a-at-Btf" id="zdt-0N-U5i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5C1-aJ-nVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4233" y="74"/>
+            <point key="canvasLocation" x="4232.8000000000002" y="73.313343328335833"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ai9-Rx-cCq">
