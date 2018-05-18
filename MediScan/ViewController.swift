@@ -8,13 +8,16 @@
 
 import UIKit
 
+var my_index = 0
+var is_filtered = false
+var filtered_drugs = [String]() // For Filtered Table
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     
 
-    // Might be different since tableview is inside viewcontroller
-    @IBOutlet weak var tableView: UITableView!
     var drug_list = Drugs()
-    var filtered_drugs = [String]() // For Filtered Table
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var searchController : UISearchController!
     var resultsController = UITableViewController()
@@ -34,7 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableView.tableHeaderView = self.searchController.searchBar
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false // Background is not dimmed when searching
-        definesPresentationContext = true // Lack of space between search bar and content now
+        definesPresentationContext = true // Lack of space between search bar and content now (not working for some reason)
         super.viewDidLoad()
         
         
@@ -45,7 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func updateSearchResults(for searchController: UISearchController) {
         // Filter through drug names
         
-        self.filtered_drugs = self.drug_list.drugs.filter { (drug:String) -> Bool in
+        filtered_drugs = self.drug_list.drugs.filter { (drug:String) -> Bool in
             if drug.lowercased().range(of: self.searchController.searchBar.text!.lowercased()) != nil {
                 return true
             }
@@ -64,7 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return drug_list.main_usages.count
         }
         else {
-            return self.filtered_drugs.count
+            return filtered_drugs.count
         }
         
     }
@@ -89,12 +92,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.textLabel?.text = filtered_drugs[indexPath.row]
             return cell
         }
-        
-        
+    }
+    
+    // Function for selection of a row to information viewController
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        my_index = indexPath.row
+        if tableView == self.tableView {
+            is_filtered = false
+        }
+        else {
+            is_filtered = true
+        }
+        performSegue(withIdentifier: "info_segue", sender: self)
         
     }
-
-   
     
 }
 
