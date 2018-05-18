@@ -41,6 +41,17 @@ class InfoViewController: UIViewController {
     
     @IBAction func add_favorite(_ sender: UIButton) {
         let x: String = drug_name.text!
-        UserDefaults.standard.set(x, forKey: "my_drug")
+        
+        if UserDefaults.standard.object(forKey: "SavedStringArray") != nil {
+            // Also should check if we already favorited the drug
+            var array = UserDefaults.standard.stringArray(forKey: "SavedStringArray") ?? [String]()
+            array.append(x)
+            UserDefaults.standard.set(array, forKey: "SavedStringArray")
+        }
+        else {
+            var array = [String]()
+            array.append(x)
+            UserDefaults.standard.set(array, forKey: "SavedStringArray")
+        }
     }
 }
