@@ -76,5 +76,20 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         performSegue(withIdentifier: "favorite_segue", sender: self)
         
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            array.remove(at: indexPath.row)
+            
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+            
+            UserDefaults.standard.set(array, forKey: "SavedStringArray")
+        }
+    }
 
 }
