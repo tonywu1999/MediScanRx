@@ -10,15 +10,21 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
+    // Might be different since tableview is inside viewcontroller
     @IBOutlet weak var tableView: UITableView!
     var drug_list = Drugs()
+    
+    var searchController : UISearchController!
+    var resultsController = UITableViewController()
     
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
         
         drug_list.set_up_dictionary() // Set up dictionary function.  Probably can execute during initialization
+        
+        self.searchController = UISearchController(searchResultsController: self.resultsController)
+        self.tableView.tableHeaderView = self.searchController.searchBar
         super.viewDidLoad()
         
         
