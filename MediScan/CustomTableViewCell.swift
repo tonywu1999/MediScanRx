@@ -12,6 +12,7 @@ class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var drug_label: UILabel!
+    @IBOutlet weak var fdrug_label: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

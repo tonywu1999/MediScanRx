@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var drug_name: UILabel!
@@ -44,14 +45,15 @@ class InfoViewController: UIViewController {
         
         if UserDefaults.standard.object(forKey: "SavedStringArray") != nil {
             // Also should check if we already favorited the drug
-            var array = UserDefaults.standard.stringArray(forKey: "SavedStringArray") ?? [String]()
-            array.append(x)
-            UserDefaults.standard.set(array, forKey: "SavedStringArray")
+            var my_array = UserDefaults.standard.stringArray(forKey: "SavedStringArray") ?? [String]()
+            my_array.append(x)
+            UserDefaults.standard.set(my_array, forKey: "SavedStringArray")
         }
         else {
-            var array = [String]()
-            array.append(x)
-            UserDefaults.standard.set(array, forKey: "SavedStringArray")
+            var my_array = [String]()
+            my_array.append(x)
+            UserDefaults.standard.set(my_array, forKey: "SavedStringArray")
         }
+        array.append(x)
     }
 }

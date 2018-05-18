@@ -18,6 +18,7 @@
 		A36C2FFB208287DB00B64C7E /* database.txt in Resources */ = {isa = PBXBuildFile; fileRef = A36C2FFA208287DB00B64C7E /* database.txt */; };
 		A37527E420ADE59400B5C267 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37527E320ADE59400B5C267 /* CustomTableViewCell.swift */; };
 		A37527E620AF1A6700B5C267 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37527E520AF1A6700B5C267 /* InfoViewController.swift */; };
+		A37527E820AF4DB000B5C267 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37527E720AF4DB000B5C267 /* FavoritesViewController.swift */; };
 		D091884720817A2B0025C8DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091884620817A2B0025C8DC /* AppDelegate.swift */; };
 		D091884920817A2B0025C8DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091884820817A2B0025C8DC /* ViewController.swift */; };
 		D091884C20817A2B0025C8DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D091884A20817A2B0025C8DC /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		A36C2FFA208287DB00B64C7E /* database.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.txt; sourceTree = "<group>"; };
 		A37527E320ADE59400B5C267 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		A37527E520AF1A6700B5C267 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		A37527E720AF4DB000B5C267 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		A8B9686CF36FDF9F48B8E0E5 /* Pods_MediScan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediScan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8AED7B2EB501125AB14A3C3 /* Pods-MediScan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediScan.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediScan/Pods-MediScan.release.xcconfig"; sourceTree = "<group>"; };
 		D091884320817A2B0025C8DC /* MediScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 				A37527E520AF1A6700B5C267 /* InfoViewController.swift */,
 				A36C2FFA208287DB00B64C7E /* database.txt */,
 				A36C2FF22081B49E00B64C7E /* drugs.swift */,
+				A37527E720AF4DB000B5C267 /* FavoritesViewController.swift */,
 				A37527E320ADE59400B5C267 /* CustomTableViewCell.swift */,
 				D091884A20817A2B0025C8DC /* Main.storyboard */,
 				D091884D20817A2C0025C8DC /* Assets.xcassets */,
@@ -355,6 +358,7 @@
 			files = (
 				A36C2FF32081B49E00B64C7E /* drugs.swift in Sources */,
 				A37527E420ADE59400B5C267 /* CustomTableViewCell.swift in Sources */,
+				A37527E820AF4DB000B5C267 /* FavoritesViewController.swift in Sources */,
 				D091884920817A2B0025C8DC /* ViewController.swift in Sources */,
 				A36C2FF52082683400B64C7E /* SearchViewController.swift in Sources */,
 				A37527E620AF1A6700B5C267 /* InfoViewController.swift in Sources */,
