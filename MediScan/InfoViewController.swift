@@ -44,16 +44,19 @@ class InfoViewController: UIViewController {
         let x: String = drug_name.text!
 
         if UserDefaults.standard.object(forKey: "SavedStringArray") != nil {
-            // Also should check if we already favorited the drug
             var my_array = UserDefaults.standard.stringArray(forKey: "SavedStringArray") ?? [String]()
-            my_array.append(x)
-            UserDefaults.standard.set(my_array, forKey: "SavedStringArray")
+            // Also should check if we already favorited the drug
+            if !(my_array.contains(x)) {
+                my_array.append(x)
+                UserDefaults.standard.set(my_array, forKey: "SavedStringArray")
+                array.append(x)
+            }
         }
         else {
             var my_array = [String]()
             my_array.append(x)
             UserDefaults.standard.set(my_array, forKey: "SavedStringArray")
+            array.append(x)
         }
-        array.append(x)
     }
 }
