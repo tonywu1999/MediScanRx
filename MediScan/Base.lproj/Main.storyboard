@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search-->
+        <!--Scan-->
         <scene sceneID="Jh5-bu-5rk">
             <objects>
                 <viewController id="RxJ-cz-c4I" customClass="SearchViewController" customModule="MediScan" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,7 +60,7 @@
                                 <color key="color" red="1" green="0.33721925149999998" blue="0.36766391500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MediScanRx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFd-oJ-Azi">
-                                <rect key="frame" x="20" y="114" width="335" height="40"/>
+                                <rect key="frame" x="20" y="70" width="335" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="g4A-wy-LWb"/>
@@ -69,16 +69,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6d-BC-xSn">
-                                <rect key="frame" x="334" y="79" width="25" height="25"/>
-                                <state key="normal" image="search"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30619217199999998" green="0.96759808380000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fLp-Lg-Vmd" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="20" id="8Ld-r7-Lim"/>
                             <constraint firstItem="gm4-Bx-PYY" firstAttribute="top" secondItem="Q33-YM-R0W" secondAttribute="bottom" constant="175" id="9pi-i6-N1m"/>
-                            <constraint firstItem="bFd-oJ-Azi" firstAttribute="top" secondItem="U6d-BC-xSn" secondAttribute="bottom" constant="10" id="D4X-FQ-K9p"/>
                             <constraint firstItem="bFd-oJ-Azi" firstAttribute="top" secondItem="afs-Xw-igm" secondAttribute="top" constant="50" id="Hqm-tD-EyW"/>
                             <constraint firstAttribute="trailing" secondItem="fLp-Lg-Vmd" secondAttribute="trailing" constant="20" id="L33-uV-07K"/>
                             <constraint firstAttribute="bottom" secondItem="fLp-Lg-Vmd" secondAttribute="bottom" constant="200" id="T6x-8l-KZB"/>
@@ -90,15 +85,13 @@
                             <constraint firstItem="439-xh-Mn1" firstAttribute="top" secondItem="gm4-Bx-PYY" secondAttribute="bottom" constant="20" id="f8b-iW-vhA"/>
                             <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="Q33-YM-R0W" secondAttribute="trailing" constant="150" id="gKr-Ms-HFd"/>
                             <constraint firstItem="bFd-oJ-Azi" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="20" id="gMo-00-srH"/>
-                            <constraint firstItem="U6d-BC-xSn" firstAttribute="top" secondItem="afs-Xw-igm" secondAttribute="top" constant="15" id="meL-Qm-ue3"/>
-                            <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="U6d-BC-xSn" secondAttribute="trailing" constant="16" id="v5c-8G-7tc"/>
                             <constraint firstItem="gm4-Bx-PYY" firstAttribute="leading" secondItem="afs-Xw-igm" secondAttribute="leading" constant="120" id="vdj-5I-2I9"/>
                             <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="439-xh-Mn1" secondAttribute="trailing" constant="50" id="yKj-xh-R6K"/>
                             <constraint firstItem="afs-Xw-igm" firstAttribute="trailing" secondItem="bFd-oJ-Azi" secondAttribute="trailing" constant="20" id="zJ0-Va-rvM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="afs-Xw-igm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="search" id="3AS-ug-bI6"/>
+                    <tabBarItem key="tabBarItem" title="Scan" image="eye-solid" selectedImage="eye-solid" id="3AS-ug-bI6"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Q33-YM-R0W" id="fBX-Fg-rYu"/>
                         <outlet property="inputt" destination="fLp-Lg-Vmd" id="kcb-9q-nKZ"/>
@@ -109,7 +102,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gq2-R7-prY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3228" y="957.57121439280365"/>
+            <point key="canvasLocation" x="364" y="470"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XYB-nX-08Z">
+            <objects>
+                <viewController id="zol-84-MX0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BzX-mx-3eF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MgT-Zs-4Be"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gm-A5-Qdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3222" y="976"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aem-jh-0k1">
@@ -296,6 +304,7 @@
                     <connections>
                         <segue destination="AFF-gk-DJ6" kind="relationship" relationship="viewControllers" id="gNz-O9-bpC"/>
                         <segue destination="529-sH-DqI" kind="relationship" relationship="viewControllers" id="6lM-0l-5ap"/>
+                        <segue destination="RxJ-cz-c4I" kind="relationship" relationship="viewControllers" id="Cax-2l-WQh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km8-Dh-5AN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -367,7 +376,7 @@
                     <navigationItem key="navigationItem" id="X8u-m4-iWH"/>
                     <connections>
                         <outlet property="tableView" destination="cqv-kn-avW" id="43S-cs-1kS"/>
-                        <segue destination="RxJ-cz-c4I" kind="show" identifier="favorite_segue" id="4As-UY-BJy"/>
+                        <segue destination="zol-84-MX0" kind="show" identifier="favorite_segue" id="8Mu-p4-3GV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBT-Es-E62" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -416,6 +425,5 @@
     <resources>
         <image name="eye-solid" width="25" height="25"/>
         <image name="media-pict-camera" width="25" height="25"/>
-        <image name="search" width="25" height="25"/>
     </resources>
 </document>
