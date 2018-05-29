@@ -52,6 +52,8 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+    // Set the height of each row
+    // Note: Figure out how you originally made the formatted cell height 100
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }

@@ -12,7 +12,7 @@ import UIKit
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var drug_name: UILabel!
-    @IBOutlet weak var main_usage: UILabel!
+    // @IBOutlet weak var main_usage: UILabel!
     @IBOutlet weak var side_effects: UILabel!
     
     var drug_list = Drugs()
@@ -23,18 +23,14 @@ class InfoViewController: UIViewController {
         
         if is_filtered == false {
             drug_name.text = drug_list.drugs[my_index]
-            main_usage.text = drug_list.get_main_usages(name: drug_list.drugs[my_index].uppercased())
+            // main_usage.text = drug_list.get_main_usages(name: drug_list.drugs[my_index].uppercased())
             side_effects.text = drug_list.get_side_effects(name: drug_list.drugs[my_index].uppercased())
         }
         else {
             drug_name.text = filtered_drugs[my_index]
-            main_usage.text = drug_list.get_main_usages(name: filtered_drugs[my_index].uppercased())
+            // main_usage.text = drug_list.get_main_usages(name: filtered_drugs[my_index].uppercased())
             side_effects.text = drug_list.get_side_effects(name: filtered_drugs[my_index].uppercased())
         }
-        main_usage.lineBreakMode = .byWordWrapping
-        main_usage.numberOfLines = 2
-        side_effects.lineBreakMode = .byWordWrapping
-        side_effects.numberOfLines = 2
         
         // Do any additional setup after loading the view.
     }
