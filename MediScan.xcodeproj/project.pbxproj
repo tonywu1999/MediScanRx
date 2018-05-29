@@ -13,7 +13,7 @@
 		A332F6CC208318CC00FABEDA /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A332F6CB208318CC00FABEDA /* CoreImage.framework */; };
 		A332F6CE208318D700FABEDA /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A332F6CD208318D700FABEDA /* libstdc++.tbd */; };
 		A334C76E20B7029900D3A47F /* InfoViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334C76D20B7029900D3A47F /* InfoViewController2.swift */; };
-		A334C77620BCDA0200D3A47F /* database.txt in Resources */ = {isa = PBXBuildFile; fileRef = A334C77520BCDA0200D3A47F /* database.txt */; };
+		A334C77820BCF3D200D3A47F /* database.txt in Resources */ = {isa = PBXBuildFile; fileRef = A334C77720BCF3D200D3A47F /* database.txt */; };
 		A36C2FEF20818DA600B64C7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D091884D20817A2C0025C8DC /* Assets.xcassets */; };
 		A36C2FF32081B49E00B64C7E /* drugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C2FF22081B49E00B64C7E /* drugs.swift */; };
 		A36C2FF52082683400B64C7E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C2FF42082683400B64C7E /* SearchViewController.swift */; };
@@ -52,7 +52,7 @@
 		A332F6CB208318CC00FABEDA /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		A332F6CD208318D700FABEDA /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		A334C76D20B7029900D3A47F /* InfoViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController2.swift; sourceTree = "<group>"; };
-		A334C77520BCDA0200D3A47F /* database.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.txt; sourceTree = "<group>"; };
+		A334C77720BCF3D200D3A47F /* database.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = database.txt; path = ../../../database.txt; sourceTree = "<group>"; };
 		A36C2FF22081B49E00B64C7E /* drugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drugs.swift; sourceTree = "<group>"; };
 		A36C2FF42082683400B64C7E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A37527E320ADE59400B5C267 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 				A36C2FF42082683400B64C7E /* SearchViewController.swift */,
 				A37527E520AF1A6700B5C267 /* InfoViewController.swift */,
 				A334C76D20B7029900D3A47F /* InfoViewController2.swift */,
-				A334C77520BCDA0200D3A47F /* database.txt */,
+				A334C77720BCF3D200D3A47F /* database.txt */,
 				A36C2FF22081B49E00B64C7E /* drugs.swift */,
 				A37527E720AF4DB000B5C267 /* FavoritesViewController.swift */,
 				A37527E320ADE59400B5C267 /* CustomTableViewCell.swift */,
@@ -292,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D091885120817A2C0025C8DC /* LaunchScreen.storyboard in Resources */,
-				A334C77620BCDA0200D3A47F /* database.txt in Resources */,
+				A334C77820BCF3D200D3A47F /* database.txt in Resources */,
 				A36C2FEF20818DA600B64C7E /* Assets.xcassets in Resources */,
 				A332F6C72083188E00FABEDA /* tessdata in Resources */,
 				D091884C20817A2B0025C8DC /* Main.storyboard in Resources */,

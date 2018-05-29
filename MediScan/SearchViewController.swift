@@ -66,15 +66,7 @@ class SearchViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if UserDefaults.standard.object(forKey: "SavedStringArray") != nil {
-            
-            let array = UserDefaults.standard.stringArray(forKey: "SavedStringArray") ?? [String]()
-            var x: String = ""
-            for i in array {
-                x = x + i
-            }
-            inputt.text = x
-        }
+        
     }
     
     @IBAction func side_effects(_ sender: UIButton) {
