@@ -29,7 +29,7 @@ class InfoViewController: UIViewController {
         else {
             drug_name.text = filtered_drugs[my_index]
             main_usage.text = drug_list.get_main_usages(name: filtered_drugs[my_index].uppercased())
-            side_effects.text = drug_list.get_side_effects(name: drug_list.drugs[my_index].uppercased())
+            side_effects.text = drug_list.get_side_effects(name: filtered_drugs[my_index].uppercased())
         }
         main_usage.lineBreakMode = .byWordWrapping
         main_usage.numberOfLines = 2

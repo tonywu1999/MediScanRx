@@ -40,14 +40,17 @@ class Drugs {
         var count: Int = 0
         for drug in lines {
             var categories: [String] = drug.components(separatedBy: "\t")
-            drug_list[categories[0].uppercased()] = count
             if(categories[0] == "Drug Name") {
                 break;
             }
-            drugs.append(categories[0])
-            side_effects.append(categories[1])
-            main_usages.append(categories[2])
-            count = count + 1
+            // Ensures no duplicate drugs are placed into database
+            if(!(drugs.contains(categories[0]))) {
+                drug_list[categories[0].uppercased()] = count
+                drugs.append(categories[0])
+                side_effects.append(categories[1])
+                main_usages.append(categories[2])
+                count = count + 1
+            }
         }
     }
     func get_side_effects(name: String) -> String {
