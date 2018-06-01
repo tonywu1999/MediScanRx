@@ -113,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-fJ-tYm">
-                                <rect key="frame" x="50" y="128" width="275" height="20.5"/>
+                                <rect key="frame" x="20" y="128" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -157,8 +157,8 @@
                             <constraint firstItem="T72-Yd-djr" firstAttribute="top" secondItem="WDz-le-EDe" secondAttribute="bottom" constant="20" id="MAD-jQ-JJ7"/>
                             <constraint firstItem="fdq-fJ-tYm" firstAttribute="top" secondItem="MgT-Zs-4Be" secondAttribute="top" constant="64" id="MNU-J9-GnS"/>
                             <constraint firstItem="MgT-Zs-4Be" firstAttribute="trailing" secondItem="WDz-le-EDe" secondAttribute="trailing" constant="50" id="Ops-ql-zM6"/>
-                            <constraint firstItem="MgT-Zs-4Be" firstAttribute="trailing" secondItem="fdq-fJ-tYm" secondAttribute="trailing" constant="50" id="hPd-Dw-A9V"/>
-                            <constraint firstItem="fdq-fJ-tYm" firstAttribute="leading" secondItem="MgT-Zs-4Be" secondAttribute="leading" constant="50" id="iWN-YJ-V4U"/>
+                            <constraint firstItem="fdq-fJ-tYm" firstAttribute="leading" secondItem="MgT-Zs-4Be" secondAttribute="leading" constant="20" id="WgY-xv-5I5"/>
+                            <constraint firstItem="MgT-Zs-4Be" firstAttribute="trailing" secondItem="fdq-fJ-tYm" secondAttribute="trailing" constant="20" id="YJA-jk-R6F"/>
                             <constraint firstItem="lHW-HB-0AH" firstAttribute="leading" secondItem="MgT-Zs-4Be" secondAttribute="leading" constant="72" id="kEP-gq-22R"/>
                             <constraint firstItem="lHW-HB-0AH" firstAttribute="top" secondItem="T72-Yd-djr" secondAttribute="bottom" constant="100" id="ljB-8E-hBP"/>
                             <constraint firstItem="MgT-Zs-4Be" firstAttribute="trailing" secondItem="lHW-HB-0AH" secondAttribute="trailing" constant="73" id="xme-HO-bPX"/>
@@ -273,14 +273,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyn-kq-OZq">
-                                <rect key="frame" x="10" y="96" width="355" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="10" y="96" width="355" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Side Effects:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rju-6b-wKs">
-                                <rect key="frame" x="25" y="177" width="325" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="25" y="161.5" width="325" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -295,7 +295,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="230" verticalCompressionResistancePriority="760" text="Effect_Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1a-at-Btf">
-                                <rect key="frame" x="20" y="233" width="335" height="251"/>
+                                <rect key="frame" x="20" y="211.5" width="335" height="272.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

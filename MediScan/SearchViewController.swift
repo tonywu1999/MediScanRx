@@ -13,7 +13,6 @@ import Foundation
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var result: UILabel!
-    var drug_list = Drugs()
     @IBOutlet weak var inputt: UITextView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -54,7 +53,6 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        drug_list.set_up_dictionary()
         side_effect.layer.cornerRadius = 10
         main_usage.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
@@ -75,16 +73,22 @@ class SearchViewController: UIViewController {
         let trimmed = user_input.trimmingCharacters(in: .whitespacesAndNewlines)
         print(user_input)
         let title2: String
-        if(drug_list.drug_in_database(name: trimmed.uppercased())) {
-            if(title == "Side Effects") {
-                title2=drug_list.get_side_effects(name: trimmed.uppercased())
+        var in_database: Bool = false
+        // if(drug_list.drug_in_database(name: trimmed.uppercased())) {
+        for i in drug_list.drugs {
+            if i.uppercased().range(of: trimmed.uppercased()) != nil {
+                if(title == "Side Effects") {
+                    title2=drug_list.get_side_effects(name: i.uppercased())
+                }
+                else {
+                    title2 = drug_list.get_main_usages(name: i.uppercased())
+                }
+                result.text = title2
+                in_database = true
+                break
             }
-            else {
-                title2 = drug_list.get_main_usages(name: trimmed.uppercased())
-            }
-            result.text = title2
         }
-        else {
+        if in_database == false {
             result.text = "Drug not found in database"
         }
     }

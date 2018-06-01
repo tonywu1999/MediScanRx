@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Global Variables
 var my_index = 0
 var is_filtered = false
 var filtered_drugs = [String]() // For Filtered Table
@@ -15,7 +16,6 @@ var filtered_drugs = [String]() // For Filtered Table
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     
 
-    var drug_list = Drugs()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -30,8 +30,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Not sure why this is needed but necessary for reloading search data
         self.resultsController.tableView.delegate = self
         self.resultsController.tableView.dataSource = self
-        
-        drug_list.set_up_dictionary() // Set up dictionary function.  Probably can execute during initialization
         
         self.searchController = UISearchController(searchResultsController: self.resultsController)
         self.tableView.tableHeaderView = self.searchController.searchBar
@@ -48,7 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func updateSearchResults(for searchController: UISearchController) {
         // Filter through drug names
         
-        filtered_drugs = self.drug_list.drugs.filter { (drug:String) -> Bool in
+        filtered_drugs = drug_list.drugs.filter { (drug:String) -> Bool in
             if drug.lowercased().range(of: self.searchController.searchBar.text!.lowercased()) != nil {
                 return true
             }

@@ -8,11 +8,13 @@
 
 import UIKit
 
+// Global Variables
 var array = [String]()
+var drug_list = Drugs()
 
 class FavoritesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var drug_list = Drugs()
+    // var drug_list = Drugs()
     
     // Put this somewhere else
     
@@ -22,7 +24,6 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         tableView.delegate = self
         tableView.dataSource = self
-        drug_list.set_up_dictionary()
         
         array = UserDefaults.standard.stringArray(forKey: "SavedStringArray") ?? [String]()
         

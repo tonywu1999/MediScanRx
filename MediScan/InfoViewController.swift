@@ -15,11 +15,8 @@ class InfoViewController: UIViewController {
     // @IBOutlet weak var main_usage: UILabel!
     @IBOutlet weak var side_effects: UILabel!
     
-    var drug_list = Drugs()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        drug_list.set_up_dictionary()
         
         if is_filtered == false {
             drug_name.text = drug_list.drugs[my_index]
